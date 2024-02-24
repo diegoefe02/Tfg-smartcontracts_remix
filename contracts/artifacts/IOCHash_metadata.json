@@ -1,0 +1,110 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "detail",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "IOCAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hash",
+						"type": "string"
+					}
+				],
+				"name": "addHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getHash",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IOCHash.sol": "IOCHash"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IOCBase.sol": {
+			"keccak256": "0x4c623abc49565a213f24337721b2713e5a9b32b2074423f01e0d578f27765d07",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c4de2fa5c3e86ec8b8c421b17c0fecb73e3d373d88d106229202dd3a4dff764d",
+				"dweb:/ipfs/Qmc6Ymn5RhcRyt51svkT1nWpE4mD4RgPLWAkBKK157SwrJ"
+			]
+		},
+		"contracts/IOCHash.sol": {
+			"keccak256": "0x82f211d10b5e794ada66deb9bfd2e9a32a27984b780f77223a87b241880faaef",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3a7d1a25ba18cac819485cee7e66732688c22db4e397bbc98b7dfff5d9fc7313",
+				"dweb:/ipfs/QmW3WT5oxJXQ7GysspkVFWgpvA2VdQhgSVD1zsANLmpBFP"
+			]
+		}
+	},
+	"version": 1
+}
