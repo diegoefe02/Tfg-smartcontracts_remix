@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.24+commit.e11b9ed9"
+		"version": "0.8.25+commit.b61c2a91"
 	},
 	"language": "Solidity",
 	"output": {
@@ -143,6 +143,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_valor",
+						"type": "string"
+					}
+				],
+				"name": "esIOCReportado",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_id",
 						"type": "uint256"
@@ -232,7 +251,7 @@
 		"compilationTarget": {
 			"contracts/IOCBase2.sol": "ThreatIntelligence"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -245,11 +264,11 @@
 	},
 	"sources": {
 		"contracts/IOCBase2.sol": {
-			"keccak256": "0x2f1a14c08a815054c0ef9d5ccdd6124ad7d5606dc92db9450b70c54731610fa6",
+			"keccak256": "0xdcbcbae9a1d2902174fd4e87582dfcfb729decc30ab1ed93990332e6eb5a4177",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://34b7d96e56f465e268ae62c4777f8293bbf829f31173700c6c85821e85619f31",
-				"dweb:/ipfs/QmWSEEQdQBtKBnh7tDXWje2Sq5jVbqT8WzaTKaHfvtVhGr"
+				"bzz-raw://6018409a740d1fffd2d9915a5ce4092c7ce8a5062f45e781c6f73b1936e6600e",
+				"dweb:/ipfs/QmSStZgorWXNWdnu9cMg1wJF5iMiWAPU73by42yRYe4zej"
 			]
 		}
 	},
