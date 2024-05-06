@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "./IIndicador.sol";
 
-contract ThreatIntelligence {
+contract Indicador {
     struct IOC {
         string tipo;
         string valor;
@@ -99,7 +100,7 @@ contract ThreatIntelligence {
     event IOCDeleted(uint256 indexed id);
 
     // Agregar un nuevo IOC
-    function agregarIOC(string memory _tipo, string memory _valor) public {
+    function agregarIOC(string memory _tipo, string memory _valor) public{
         require(esTipoPermitido(_tipo), "Tipo de IOC no permitido");
         require(validarFormato(_tipo, _valor), "Formato de IOC invalido");
         require(!esIOCReportado(_valor), "IOC ya reportado");
@@ -112,6 +113,7 @@ contract ThreatIntelligence {
 
         iocs[totalIOCs] = nuevoIOC;
         totalIOCs++;
+        emit IOCAdded(totalIOCs - 1, _tipo, _valor);  // Notificar a los usuarios que han agregado un nuevo IOC con su ID y el tipo y valor de forma asíncrona para que se puedan seguir con el resto de acciones sin tener que esperar a que se complete la transacción
     }
 
     // Actualizar un IOC existente
@@ -133,10 +135,10 @@ contract ThreatIntelligence {
         emit IOCDeleted(_id);
     }
 
-    // Obtener un IOC por su ID
-    function obtenerIOC(uint256 _id) public view returns (IOC memory) {
+    function obtenerIOC(uint256 _id) public view returns (string memory tipo, string memory valor, address reportadoPor, uint256 fechaReporte) {
         require(_id < totalIOCs, "IOC no existe");
-        return iocs[_id];
+        IOC storage ioc = iocs[_id];
+        return (ioc.tipo, ioc.valor, ioc.reportadoPor, ioc.fechaReporte);
     }
 
     function obtenerTodosIOCs() public view returns (IOC[] memory) {

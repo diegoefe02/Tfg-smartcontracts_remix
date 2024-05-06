@@ -170,31 +170,24 @@
 				"name": "obtenerIOC",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "string",
-								"name": "tipo",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "valor",
-								"type": "string"
-							},
-							{
-								"internalType": "address",
-								"name": "reportadoPor",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "fechaReporte",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct ThreatIntelligence.IOC",
-						"name": "",
-						"type": "tuple"
+						"internalType": "string",
+						"name": "tipo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "valor",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "reportadoPor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaReporte",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -227,7 +220,7 @@
 								"type": "uint256"
 							}
 						],
-						"internalType": "struct ThreatIntelligence.IOC[]",
+						"internalType": "struct Indicador.IOC[]",
 						"name": "",
 						"type": "tuple[]"
 					}
@@ -249,7 +242,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/IOCBase2.sol": "ThreatIntelligence"
+			"contracts/Indicador.sol": "Indicador"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -263,12 +256,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/IOCBase2.sol": {
-			"keccak256": "0x56a7a3b691244f138969896c647e090b6d7687883bcb37260e308c5190c34d94",
+		"contracts/IIndicador.sol": {
+			"keccak256": "0x1d3801f9b9afdd011b1a4d0e7f55700d979be39ea4287da01988d7d5f2a5e64a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://18bb771e35bc067b966b3216fc6a140e2499d465b537610b4728cd24b774a526",
-				"dweb:/ipfs/QmYoR9iRgo4iZJg2oLWjDqSZ5tqd7CtjxzsqwV55GVkXGd"
+				"bzz-raw://394bb755715d61dd80e6e99fb63f26a984c69105406186ff6fb9480691037fd0",
+				"dweb:/ipfs/QmY6TQrJ5itk8VPH34UmeLjVAgMUyyM8ypP4TDGCps4Ho7"
+			]
+		},
+		"contracts/Indicador.sol": {
+			"keccak256": "0x4a4a6a34cb3d18fdcc01cf104c2316317aba8b3f21f329e302244845b2d56300",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://99134683abfcaddf4299d51776d54ea30eb886766228c3a836250348177a6b49",
+				"dweb:/ipfs/QmamAHE9CRZdQiKxhH4557v3TiN2jkY6YTMUcH5Q8cnr3C"
 			]
 		}
 	},

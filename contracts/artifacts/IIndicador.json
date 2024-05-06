@@ -1,0 +1,184 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"actualizarIOC(uint256,string,string)": "f6b7af94",
+			"agregarIOC(string,string)": "9290aaa2",
+			"eliminarIOC(uint256)": "ccd666d2",
+			"obtenerIOC(uint256)": "390b6116",
+			"obtenerTodosIOCs()": "55f40ba9"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "id",
+					"type": "uint256"
+				},
+				{
+					"internalType": "string",
+					"name": "tipo",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "valor",
+					"type": "string"
+				}
+			],
+			"name": "actualizarIOC",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "tipo",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "valor",
+					"type": "string"
+				}
+			],
+			"name": "agregarIOC",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "id",
+					"type": "uint256"
+				}
+			],
+			"name": "eliminarIOC",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "id",
+					"type": "uint256"
+				}
+			],
+			"name": "obtenerIOC",
+			"outputs": [
+				{
+					"internalType": "string",
+					"name": "tipo",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "valor",
+					"type": "string"
+				},
+				{
+					"internalType": "address",
+					"name": "reportadoPor",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "fechaReporte",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "obtenerTodosIOCs",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "string",
+							"name": "tipo",
+							"type": "string"
+						},
+						{
+							"internalType": "string",
+							"name": "valor",
+							"type": "string"
+						},
+						{
+							"internalType": "address",
+							"name": "reportadoPor",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "fechaReporte",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct IIndicador.IOC[]",
+					"name": "",
+					"type": "tuple[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}
