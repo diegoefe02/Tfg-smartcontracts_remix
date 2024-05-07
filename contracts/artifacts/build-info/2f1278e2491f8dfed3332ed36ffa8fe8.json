@@ -1,0 +1,875 @@
+{
+	"id": "2f1278e2491f8dfed3332ed36ffa8fe8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.25",
+	"solcLongVersion": "0.8.25+commit.b61c2a91",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/IHerramientas.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IHerramientas {\r\n    struct Herramienta {\r\n        string nombre;\r\n        string descripcion;\r\n        address reportadoPor;\r\n        uint256 fechaReporte;\r\n    }\r\n    \r\n    function agregarHerramienta(string memory nombre, string memory descripcion) external;\r\n    function actualizarHerramienta(uint256 id, string memory nombre, string memory descripcion) external;\r\n    function eliminarHerramienta(uint256 id) external;\r\n    function obtenerHerramienta(uint256 id) external view returns (string memory nombre, string memory descripcion, address reportadoPor, uint256 fechaReporte);\r\n    function obtenerTodasHerramientas() external view returns (Herramienta[] memory);\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/IHerramientas.sol": {
+				"IHerramientas": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "uint256",
+									"name": "id",
+									"type": "uint256"
+								},
+								{
+									"internalType": "string",
+									"name": "nombre",
+									"type": "string"
+								},
+								{
+									"internalType": "string",
+									"name": "descripcion",
+									"type": "string"
+								}
+							],
+							"name": "actualizarHerramienta",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "string",
+									"name": "nombre",
+									"type": "string"
+								},
+								{
+									"internalType": "string",
+									"name": "descripcion",
+									"type": "string"
+								}
+							],
+							"name": "agregarHerramienta",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "uint256",
+									"name": "id",
+									"type": "uint256"
+								}
+							],
+							"name": "eliminarHerramienta",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "uint256",
+									"name": "id",
+									"type": "uint256"
+								}
+							],
+							"name": "obtenerHerramienta",
+							"outputs": [
+								{
+									"internalType": "string",
+									"name": "nombre",
+									"type": "string"
+								},
+								{
+									"internalType": "string",
+									"name": "descripcion",
+									"type": "string"
+								},
+								{
+									"internalType": "address",
+									"name": "reportadoPor",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "fechaReporte",
+									"type": "uint256"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "obtenerTodasHerramientas",
+							"outputs": [
+								{
+									"components": [
+										{
+											"internalType": "string",
+											"name": "nombre",
+											"type": "string"
+										},
+										{
+											"internalType": "string",
+											"name": "descripcion",
+											"type": "string"
+										},
+										{
+											"internalType": "address",
+											"name": "reportadoPor",
+											"type": "address"
+										},
+										{
+											"internalType": "uint256",
+											"name": "fechaReporte",
+											"type": "uint256"
+										}
+									],
+									"internalType": "struct IHerramientas.Herramienta[]",
+									"name": "",
+									"type": "tuple[]"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"actualizarHerramienta(uint256,string,string)": "d62ac10c",
+							"agregarHerramienta(string,string)": "94cec54b",
+							"eliminarHerramienta(uint256)": "9ef07244",
+							"obtenerHerramienta(uint256)": "e2921ea5",
+							"obtenerTodasHerramientas()": "7cc5e41c"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.25+commit.b61c2a91\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"descripcion\",\"type\":\"string\"}],\"name\":\"actualizarHerramienta\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"descripcion\",\"type\":\"string\"}],\"name\":\"agregarHerramienta\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"eliminarHerramienta\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"obtenerHerramienta\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"descripcion\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"reportadoPor\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"fechaReporte\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"obtenerTodasHerramientas\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"nombre\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"descripcion\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"reportadoPor\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"fechaReporte\",\"type\":\"uint256\"}],\"internalType\":\"struct IHerramientas.Herramienta[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/IHerramientas.sol\":\"IHerramientas\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/IHerramientas.sol\":{\"keccak256\":\"0x9c3a42b5c2a41bf8d714ae0d2b43894e513877a3937a8e9e7e2d5422bbbaca6e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e949f77c03fa5afd3b7d57515be6d715da1cba9dd678321efac18cb97aec733\",\"dweb:/ipfs/QmbWprV6b2SAm7drFWtCQbFN9dN91LWUnnGXHzVgyLYc4L\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/IHerramientas.sol": {
+				"ast": {
+					"absolutePath": "contracts/IHerramientas.sol",
+					"exportedSymbols": {
+						"IHerramientas": [
+							52
+						]
+					},
+					"id": 53,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IHerramientas",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": false,
+							"id": 52,
+							"linearizedBaseContracts": [
+								52
+							],
+							"name": "IHerramientas",
+							"nameLocation": "70:13:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "IHerramientas.Herramienta",
+									"id": 10,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "nombre",
+											"nameLocation": "128:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 10,
+											"src": "121:13:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "121:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "descripcion",
+											"nameLocation": "152:11:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 10,
+											"src": "145:18:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "145:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 7,
+											"mutability": "mutable",
+											"name": "reportadoPor",
+											"nameLocation": "182:12:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 10,
+											"src": "174:20:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											},
+											"typeName": {
+												"id": 6,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "174:7:0",
+												"stateMutability": "nonpayable",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 9,
+											"mutability": "mutable",
+											"name": "fechaReporte",
+											"nameLocation": "213:12:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 10,
+											"src": "205:20:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 8,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "205:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "Herramienta",
+									"nameLocation": "98:11:0",
+									"nodeType": "StructDefinition",
+									"scope": 52,
+									"src": "91:142:0",
+									"visibility": "public"
+								},
+								{
+									"functionSelector": "94cec54b",
+									"id": 17,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "agregarHerramienta",
+									"nameLocation": "254:18:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 15,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 12,
+												"mutability": "mutable",
+												"name": "nombre",
+												"nameLocation": "287:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "273:20:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 11,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "273:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 14,
+												"mutability": "mutable",
+												"name": "descripcion",
+												"nameLocation": "309:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "295:25:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 13,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "295:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "272:49:0"
+									},
+									"returnParameters": {
+										"id": 16,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "330:0:0"
+									},
+									"scope": 52,
+									"src": "245:86:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"functionSelector": "d62ac10c",
+									"id": 26,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "actualizarHerramienta",
+									"nameLocation": "346:21:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 24,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 19,
+												"mutability": "mutable",
+												"name": "id",
+												"nameLocation": "376:2:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 26,
+												"src": "368:10:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 18,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "368:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 21,
+												"mutability": "mutable",
+												"name": "nombre",
+												"nameLocation": "394:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 26,
+												"src": "380:20:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 20,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "380:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 23,
+												"mutability": "mutable",
+												"name": "descripcion",
+												"nameLocation": "416:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 26,
+												"src": "402:25:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 22,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "402:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "367:61:0"
+									},
+									"returnParameters": {
+										"id": 25,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "437:0:0"
+									},
+									"scope": 52,
+									"src": "337:101:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"functionSelector": "9ef07244",
+									"id": 31,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "eliminarHerramienta",
+									"nameLocation": "453:19:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 29,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 28,
+												"mutability": "mutable",
+												"name": "id",
+												"nameLocation": "481:2:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 31,
+												"src": "473:10:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 27,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "473:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "472:12:0"
+									},
+									"returnParameters": {
+										"id": 30,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "493:0:0"
+									},
+									"scope": 52,
+									"src": "444:50:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"functionSelector": "e2921ea5",
+									"id": 44,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "obtenerHerramienta",
+									"nameLocation": "509:18:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 34,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 33,
+												"mutability": "mutable",
+												"name": "id",
+												"nameLocation": "536:2:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 44,
+												"src": "528:10:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 32,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "528:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "527:12:0"
+									},
+									"returnParameters": {
+										"id": 43,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 36,
+												"mutability": "mutable",
+												"name": "nombre",
+												"nameLocation": "577:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 44,
+												"src": "563:20:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 35,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "563:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 38,
+												"mutability": "mutable",
+												"name": "descripcion",
+												"nameLocation": "599:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 44,
+												"src": "585:25:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 37,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "585:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 40,
+												"mutability": "mutable",
+												"name": "reportadoPor",
+												"nameLocation": "620:12:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 44,
+												"src": "612:20:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 39,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "612:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 42,
+												"mutability": "mutable",
+												"name": "fechaReporte",
+												"nameLocation": "642:12:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 44,
+												"src": "634:20:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 41,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "634:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "562:93:0"
+									},
+									"scope": 52,
+									"src": "500:156:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"functionSelector": "7cc5e41c",
+									"id": 51,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "obtenerTodasHerramientas",
+									"nameLocation": "671:24:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 45,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "695:2:0"
+									},
+									"returnParameters": {
+										"id": 50,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 49,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 51,
+												"src": "721:20:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_array$_t_struct$_Herramienta_$10_memory_ptr_$dyn_memory_ptr",
+													"typeString": "struct IHerramientas.Herramienta[]"
+												},
+												"typeName": {
+													"baseType": {
+														"id": 47,
+														"nodeType": "UserDefinedTypeName",
+														"pathNode": {
+															"id": 46,
+															"name": "Herramienta",
+															"nameLocations": [
+																"721:11:0"
+															],
+															"nodeType": "IdentifierPath",
+															"referencedDeclaration": 10,
+															"src": "721:11:0"
+														},
+														"referencedDeclaration": 10,
+														"src": "721:11:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_struct$_Herramienta_$10_storage_ptr",
+															"typeString": "struct IHerramientas.Herramienta"
+														}
+													},
+													"id": 48,
+													"nodeType": "ArrayTypeName",
+													"src": "721:13:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_array$_t_struct$_Herramienta_$10_storage_$dyn_storage_ptr",
+														"typeString": "struct IHerramientas.Herramienta[]"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "720:22:0"
+									},
+									"scope": 52,
+									"src": "662:81:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 53,
+							"src": "60:686:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:715:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

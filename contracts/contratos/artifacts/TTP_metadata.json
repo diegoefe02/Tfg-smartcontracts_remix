@@ -1,0 +1,240 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					}
+				],
+				"name": "TTPAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "TTPDeleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					}
+				],
+				"name": "TTPUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					}
+				],
+				"name": "actualizarTTP",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					}
+				],
+				"name": "agregarTTP",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "eliminarTTP",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerTTP",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "reportadoPor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaReporte",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerTodosTTPs",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "descripcion",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "categoria",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "reportadoPor",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fechaReporte",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ITTP.TTP[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/contratos/TTP.sol": "TTP"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/contratos/TTP.sol": {
+			"keccak256": "0x442c12b1548d814ebc13b375fcef2a6f89e143f379f551718eaa5ed31259d000",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0d7b870ed53df51c30aec9b69bcbefebd12a594ba58a12c885da47e7b73cde7d",
+				"dweb:/ipfs/QmQNDCUzGH5hJmSSVRZLA8LRG93M7abHsVVqr3sFFUfNLv"
+			]
+		},
+		"contracts/interfaces/ITTP.sol": {
+			"keccak256": "0xee417159c85d6acce7e4bb6e0d0fa3bd3557ee7f1625ea2eb7807a98ffacb650",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fd2ab675a5881f2cfaf2ba5e4ab663438ad7b93a0470970ed028920d8a04cb40",
+				"dweb:/ipfs/QmR2SN6g4feaRsK2xxQvKeym4uyLHiaHdJ8oQJvnio9yPw"
+			]
+		}
+	},
+	"version": 1
+}

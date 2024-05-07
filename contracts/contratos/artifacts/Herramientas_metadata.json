@@ -1,0 +1,240 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					}
+				],
+				"name": "HerramientaAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "HerramientaDeleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					}
+				],
+				"name": "HerramientaUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					}
+				],
+				"name": "actualizarHerramienta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					}
+				],
+				"name": "agregarHerramienta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "eliminarHerramienta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerHerramienta",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "reportadoPor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaReporte",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerTodasHerramientas",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nombre",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "descripcion",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "reportadoPor",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fechaReporte",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IHerramientas.Herramienta[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/contratos/Herramientas.sol": "Herramientas"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/contratos/Herramientas.sol": {
+			"keccak256": "0x18ed259059e5d4f10cb1c64c103628a1147d4c3dcfbb1a25ad7aa40a48bca419",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c52430199f5a2adb0e0032f220910f050e7295f60f34f3a018b0935c1de6ffde",
+				"dweb:/ipfs/QmbeJvxwmqJC1hVc4jveF5bQ3R9KaHNKZA9CFG94ZBCgat"
+			]
+		},
+		"contracts/interfaces/IHerramientas.sol": {
+			"keccak256": "0x9c3a42b5c2a41bf8d714ae0d2b43894e513877a3937a8e9e7e2d5422bbbaca6e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e949f77c03fa5afd3b7d57515be6d715da1cba9dd678321efac18cb97aec733",
+				"dweb:/ipfs/QmbWprV6b2SAm7drFWtCQbFN9dN91LWUnnGXHzVgyLYc4L"
+			]
+		}
+	},
+	"version": 1
+}

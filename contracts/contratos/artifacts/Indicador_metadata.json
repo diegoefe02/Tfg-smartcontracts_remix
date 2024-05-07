@@ -1,0 +1,277 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "tipo",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "valor",
+						"type": "string"
+					}
+				],
+				"name": "IOCAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "IOCDeleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "tipo",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "valor",
+						"type": "string"
+					}
+				],
+				"name": "IOCUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_tipo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_valor",
+						"type": "string"
+					}
+				],
+				"name": "actualizarIOC",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_tipo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_valor",
+						"type": "string"
+					}
+				],
+				"name": "agregarIOC",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nuevoTipo",
+						"type": "string"
+					}
+				],
+				"name": "agregarTipoPermitido",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "eliminarIOC",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_valor",
+						"type": "string"
+					}
+				],
+				"name": "esIOCReportado",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerIOC",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "tipo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "valor",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "reportadoPor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaReporte",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "obtenerTodosIOCs",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "tipo",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "valor",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "reportadoPor",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fechaReporte",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Indicador.IOC[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/contratos/Indicador.sol": "Indicador"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/contratos/Indicador.sol": {
+			"keccak256": "0x5410e758a0a8ad2fd98ada36ceee9e30bdab98ef0d8fa260aa2b10ca712104a3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3cc003c7553fd8143ac3f956925e8da97f2f43996e98c414f08cc23898ba4a1f",
+				"dweb:/ipfs/QmTVJSbE2jgS7Z9TkKQnjg4LxZHUaBWgE6s2aEbDuDqp6p"
+			]
+		},
+		"contracts/interfaces/IIndicador.sol": {
+			"keccak256": "0x1d3801f9b9afdd011b1a4d0e7f55700d979be39ea4287da01988d7d5f2a5e64a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://394bb755715d61dd80e6e99fb63f26a984c69105406186ff6fb9480691037fd0",
+				"dweb:/ipfs/QmY6TQrJ5itk8VPH34UmeLjVAgMUyyM8ypP4TDGCps4Ho7"
+			]
+		}
+	},
+	"version": 1
+}

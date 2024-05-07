@@ -11,10 +11,43 @@
 						"internalType": "address",
 						"name": "_indicadorAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_ttpAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_herramientasAddress",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					}
+				],
+				"name": "actualizarHerramienta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [
@@ -42,6 +75,47 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					}
+				],
+				"name": "actualizarTTP",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					}
+				],
+				"name": "agregarHerramienta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "tipo",
 						"type": "string"
@@ -60,6 +134,37 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					}
+				],
+				"name": "agregarTTP",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "eliminarHerramienta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "id",
 						"type": "uint256"
@@ -71,6 +176,32 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "eliminarTTP",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "herramientasContract",
+				"outputs": [
+					{
+						"internalType": "contract IHerramientas",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "indicadorContract",
 				"outputs": [
@@ -78,6 +209,40 @@
 						"internalType": "contract IIndicador",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerHerramienta",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "reportadoPor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaReporte",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -118,6 +283,40 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "obtenerTTP",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "descripcion",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "categoria",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "reportadoPor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaReporte",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -138,9 +337,48 @@
 						"type": "address"
 					}
 				],
+				"name": "setHerramientasContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newAddress",
+						"type": "address"
+					}
+				],
 				"name": "setIndicadorContract",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newAddress",
+						"type": "address"
+					}
+				],
+				"name": "setTTPContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ttpContract",
+				"outputs": [
+					{
+						"internalType": "contract ITTP",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -171,7 +409,23 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/IIndicador.sol": {
+		"contracts/ManagerSTIX.sol": {
+			"keccak256": "0xe60ff3e9acee606eca41416b687c536af86dbb7130402b6e8dc6c5012e07c49c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d0856c820eda06e30655fd0dc4f592cba71e79ae6fb25b9d25ba277398aaafb8",
+				"dweb:/ipfs/QmadSECh671t1Azet72dTRbgq9zM6sChwf4GHuP6PcDkBg"
+			]
+		},
+		"contracts/interfaces/IHerramientas.sol": {
+			"keccak256": "0x9c3a42b5c2a41bf8d714ae0d2b43894e513877a3937a8e9e7e2d5422bbbaca6e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e949f77c03fa5afd3b7d57515be6d715da1cba9dd678321efac18cb97aec733",
+				"dweb:/ipfs/QmbWprV6b2SAm7drFWtCQbFN9dN91LWUnnGXHzVgyLYc4L"
+			]
+		},
+		"contracts/interfaces/IIndicador.sol": {
 			"keccak256": "0x1d3801f9b9afdd011b1a4d0e7f55700d979be39ea4287da01988d7d5f2a5e64a",
 			"license": "MIT",
 			"urls": [
@@ -179,12 +433,12 @@
 				"dweb:/ipfs/QmY6TQrJ5itk8VPH34UmeLjVAgMUyyM8ypP4TDGCps4Ho7"
 			]
 		},
-		"contracts/ManagerSTIX.sol": {
-			"keccak256": "0xceace23a1402934df02890d51c84525be9b0e2fba71a8b636faf89a7575cdd99",
+		"contracts/interfaces/ITTP.sol": {
+			"keccak256": "0xee417159c85d6acce7e4bb6e0d0fa3bd3557ee7f1625ea2eb7807a98ffacb650",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0d43b88b9dba87778110992ade268f99791148fa67ac7b31d4c0ccb00c62f8b",
-				"dweb:/ipfs/QmfQPNzTdTeWh6QbGU64D2hkBLHukAXUhnr58KYiELd6nr"
+				"bzz-raw://fd2ab675a5881f2cfaf2ba5e4ab663438ad7b93a0470970ed028920d8a04cb40",
+				"dweb:/ipfs/QmR2SN6g4feaRsK2xxQvKeym4uyLHiaHdJ8oQJvnio9yPw"
 			]
 		}
 	},
